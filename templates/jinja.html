@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "linkcss.html" %}
+    <title>Jinja</title>
+
+</head>
+
+<body bgcolor="#dcdcdc">
+<header class="header-container">
+        {% include "navbar.html"  %}
+    </header>
+
+</h3>
+
+<h1>1. String Functions:</h1>
+<div class="p-jin">
+    {{ "hello world" | length }}  # Output: 11 <br>
+    {{ "hello world" | reverse }}  # Output: dlrow olleh <br>
+{#    {{ "hello world" | slice(0, 5) | string }}  # Output: hello#}
+</div>
+<hr>
+
+<h1>2. Text Formatting Functions:</h1>
+<div class="p-jin">
+    {{ "hello world" | capitalize }}  --- Output: Hello World <br>
+    {{ "hello world" | lower }}       --- Output: hello world <br>
+    {{ "hello world" | upper }}         --- Output: HELLO WORLD <br>
+    {{ "hello world" | title }}  --- Output: Hello World <br>
+    {{ "   hello world   " | trim }}  --- Output: hello world <br>
+</div>
+<hr>
+
+<h1>3. Math Functions:</h1>
+<div class="p-jin">
+    {{ -4 | abs }}      # Output: 4 <br>
+    {{ 5 | float }}  # Output: 5.0 <br>
+    {{ 5.9 | int }}  # Output: 5 <br>
+    {{ 5.444 | round }}  # Output: 5 <br>
+</div>
+<hr>
+<h1>4. List Functions:</h1>
+<div class="p-jin">
+    {{ [1, 2, 3, 4, 5] | first }}  # Output: 1 <br>
+    {{ [1, 2, 3, 4, 5] | last }}  # Output: 5 <br>
+    {{ [1, 2, 3, 4, 5] | length }}  # Output: 5 <br>
+</div>
+<hr>
+
+<h1>5. URL Functions:</h1>
+<div class="p-jin">
+    {{ "https://example.com" | urlize }}  # Output: <a href="https://example.com">https://example.com</a> <br>
+    {{ "https://example.com" | urlencode }}  # Output: https%3A%2F%2Fexample.com <br>
+</div>
+
+<h1>6. Miscellaneous Functions:</h1>
+<div class="p-jin">
+    {{ "hello world " | wordcount }}  # Output: 2 <br>
+    {{ "hello world " | wordwrap }}  # Output: hello world <br>
+</div>
+<hr>
+<br>
+<h1>7.Macro Functions:</h1>
+<div class="p-jin">
+    define macro name greet
+    {% macro greet(name) %}
+    Hello, {{ name }}!
+        Ha,{{ name }}
+    {% endmacro %}
+    {{ greet("John") }}  # Output: Hello, John!
+</div>
+<hr>
+<br>
+<h1>8. Miscellaneous Functions:</h1>
+<div class="p-jin">
+    {{ "42" | int }}       # Output: 42 <br>
+    {{ 42 | string }}      # Output: "42" <br>
+    {{ 3.14159 | float }}  # Output: 3.14159 <br>
+{#    {{ true | boolean }}   # Output: true <br>#}
+{#    {{ "Hello World" | default("Default Value") }} # Output: Hello World <br>#}
+</div>
+<hr>
+<h1>9. Boolean Functions:</h1>
+<div class="p-jin">
+    {{ not true }} - Output: false
+    {{ not false }} - Output: true
+    {{ true and false }} - Output: false
+    {{ true or false }} - Output: true
+</div>
+
+<hr>
+<h1>10. Comparison Functions:</h1>
+<div class="p-jin">
+    {{ 5 > 3 }}          <!-- Output: true --><br>
+    {{ 5 < 3 }}          <!-- Output: false --><br>
+    {{ 5 == 5 }}         <!-- Output: true --><br>
+    {{ 5 != 3 }}         <!-- Output: true --><br>
+</div>
+<hr>
+<h1>11. File Functions:</h1>
+<div class="p-jin">
+    Contents of myfile.txt: {{ file_contents }}<br>
+    Write operation successful: {{ write_success }}<br>
+</div>
+<hr>
+<h1>12. HTML Functions:</h1>
+<div class="p-jin">
+    {{ "<div>Hello World</div>" | escape }} # Output: &lt;div&gt;Hello World&lt;/div&gt; <br>
+
+</div>
+<hr>
+<h1>13. Random Functions:</h1>
+<div class="p-jin">
+    {{ range(1, 10) | random }}  # Output: (random number between 1 and 10) <br>
+    {{ ["apple", "banana", "cherry"] | random }} # Output: (random item from the list) <br>
+</div>
+<hr>
+
+
+<h1>14. Array Functions:</h1>
+
+<div class="p-jin">
+{#    {{ [1, 2, 3, 4, 5] | reduce("sum") }}    # Output: 15 <br>#}
+    {{ [1, 2, 3, 4, 5] | unique }}           # Output: [1, 2, 3, 4, 5] <br>
+{#    {{ [1, 2, 3, 4, 5] | find("is_even") }}  # Output: 2 <br>#}
+{#    {{ [1, 2, 3, 4, 5] | any("is_even") }}   # Output: true <br>#}
+</div>
+<hr>
+<h1>15.Basic Expression</h1>
+
+<div class="p-jin">This is print :  {{ "Hello World...!" }}
+This is define variable :   {%  set name='SETEC INSTITUTE'  %} {{ name }}
+</div>
+<hr>
+<h1>16.Loop Functions::</h1>
+<div class="p-jin">
+    {% for item in [1, 2, 3] %}
+    {{ item }}
+    {% endfor %}  # Output: 1 2 3
+</div>
+<hr>
+<br>
+
+<h1>17.Conditional Functions:</h1>
+<div class="p-jin">
+    {{ "hello" if True else "goodbye" }}  # Output: hello <br>
+    {{ "hello" if False else "goodbye" }}  # Output: goodbye <br>
+</div>
+<hr>
+<br>
+<h1>18.List and Dictionary Functions:</h1>
+<div class="p-jin">
+    {{ [1, 2, 3] | length }}  # Output: 3 <br>
+    {{ [1, 2, 3] | first }}  # Output: 1  <br>
+    {{ [1, 2, 3] | last }}  # Output: 3 <br>
+    {{ ["a", "b", "c"] | join(", ") }}  # Output: a, b, c <br>
+{#    {{ {"a": 1, "b": 2} | keys }}  # Output: ["a", "b"] <br>#}
+{#    {{ {"a": 1, "b": 2} | values }}  # Output: [1, 2] <br>#}
+</div>
+<hr>
+<br>
+
+<hr>
+<h1>19. Aggregation Functions:</h1>
+<div class="p-jin">
+    {{ [1, 2, 3, 4, 5] | sum }}  # Output: 15 <br>
+{#    {{ [1, 2, 3, 4, 5] | average }}  # Output: 3.0 <br>#}
+    {{ [1, 2, 3, 4, 5] | max }}  # Output: 5 <br>
+    {{ [1, 2, 3, 4, 5] | min }}  # Output: 1 <br>
+</div>
+<hr>
+<h1>20. Math Functions:</h1>
+<p class="p-jin">
+    {{ 16 ** 0.5 }}  # Output: 4.0 <br>
+    {{ 3.14159 | round(2) }}  # Output: 3.14 <br>
+    {{ 2 ** 3 }}  # Output: 8 <br>
+</p>
+<hr>
+<h1>21. List Operations:</h1>
+<div class="p-jin">
+    {{ [1, 2, 3] + [4, 5] }}  # Output: [1, 2, 3, 4, 5] <br>
+    {{ [1, 2, 3] * 2 }}  # Output: [1, 2, 3, 1, 2, 3] <br>
+    {{ [1, 2, 3, 4, 5][1:4] }}  # Output: [2, 3, 4] <br>
+{#    {{ [1, 2, 3, 4, 5] | reverse }}  # Output: [5, 4, 3, 2, 1] <br>#}
+</div>
+<hr>
+{#<h1>Formatted Number</h1>#}
+{#    <p>Number: {{ num | number_format }}</p>#}
+{#<hr>#}
+<h1>22.Random</h1>
+<div class="p-jin">
+
+    {{ [3, 1, 2, 4] | sort }}  # Output: [1, 2, 3, 4] <br>
+    {{ ["banana", "apple", "cherry"] | sort }}  # Output: ["apple", "banana", "cherry"] <br>
+
+</div>
+<h1>23. Include</h1>
+    <h5>{% include "EXnav.html" %}</h5>
+    <hr>
+<h1>24Condition statement</h1>
+
+    {% set name = "Zorin" %}
+
+        {% if name != "Zorin" %}
+            <div class="p-jin">Your name is not Zorin.</div>
+        {% else %}
+            <div class="p-jin">Your name is Zorin.</div>
+        {% endif %}
+
+<hr>
+<h1>25. Concat String</h1>
+    <div class="p-jin">
+        {{ "Hello " ~ hour ~ " World!" }}
+    </div>
+<hr>
+    <h1>26.Ternary Operator</h1>
+
+    {% set name = "Zorin" %}
+
+    <div class="p-jin">Your name is {{ "Zorin" if name == "Zorin" else "not Zorin" }}.</div>
+
+    <hr>
+{% include "footer.html" %}
+</body>
+</html>

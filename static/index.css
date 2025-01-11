@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    /* font-weight: 100;
+    font-style: normal; */
+}
+*{
+    font-family:"BenchNine", sans-serif;
+}
+.header-container{
+    width: 100%;
+    background-color: darkblue;
+}
+.menu-lists{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+
+}
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+} */
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+} */
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&family=Konkhmer+Sleokchher&family=Noto+Sans+Khmer:wght@100..900&family=Noto+Sans+Mayan+Numerals&display=swap');
+*{
+    font-family:"BenchNine", sans-serif;
+}
+.container{
+    width: 60vw; /*=60%  vw=view width */
+    margin: auto;
+    background-color: rgb(229, 228, 228);
+    padding: 20px;
+    border-radius: 10px;
+    border:2px solid darkblue;
+}
+.title{
+    text-align: center;
+    color: darkblue;
+    font-variant: small-caps;
+    font-weight: 400;
+
+
+}
+.keyword{
+    font-weight: 500;
+    color: darkblue;
+
+
+}
+.span{
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: red;
+    text-transform: uppercase;
+
+}
+small{
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+.btn{
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 8px 10px; /* ler krom right left. if we write only one vvalue it mean all =20*/
+    border-radius: 4px;
+    letter-spacing: 3px;
+}
+
+/* p{
+    font-weight: 400;
+    font-variant: small-caps;
+    font-style: italic;
+    font-display: swap;
+    line-height: 50px;
+    letter-spacing: 2px;
+} */
+
+.title{
+    text-align: center;
+    margin: 40px 0;
+}
+.title h1{
+    color: darkblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.title p{
+    color: black;
+}
+a,
+li{
+    color: white;
+    text-decoration: none;
+
+}
+footer{
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 5px;
+}
+footer p{
+    color: #eaf0f9;
+
+}
+h1{
+    font-size: 32px;
+}
+/* Target all <p> elements */
+p {
+  font-family: Arial, sans-serif; /* Change the font family */
+  font-size: 16px;                /* Set the font size */
+  color: #333333;                 /* Set the text color */
+  line-height: 1.5;               /* Set the line height for better readability */
+  margin-bottom: 20px;            /* Add some space below each paragraph */
+}
+
+/* Add a class for specific custom styles */
+p.custom {
+  font-style: italic;             /* Italicize the text */
+  background-color: #f0f0f0;      /* Set a light grey background */
+  padding: 10px;                  /* Add some padding inside the paragraph */
+  border-left: 4px solid #007BFF; /* Add a blue left border */
+}
+
+.multiline-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

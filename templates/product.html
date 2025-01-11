@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "linkcss.html" %}
+    <title>Product</title>
+
+
+</head>
+<body>
+    <header class="header-container">
+        {% include "navbar.html" %}
+    </header>
+
+    <div class="container">
+        <div class="row">
+            {% for item in product_list %}
+                <div class="col-md-3 col-sm-12">
+                    <div class="card" style="width: 18rem;">
+                    <img src="{{ item.image }}" class="card-img-top" alt="...">
+                     <div class="card-body">
+                        <h5 class="card-title" style="text-transform: capitalize">{{ item.title }}</h5>
+                        <p class="multiline-text" class="card-text">{{ item.description }}</p>
+                        <a target="_blank" href="product_detail?id={{ item.id }}" class="btn btn-primary mt-3">More...</a>
+
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+    {% include "footer.html" %}
+</body>
+
+</html>
